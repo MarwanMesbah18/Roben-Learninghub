@@ -110,15 +110,23 @@ export default function TracksPage() {
   });
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
       <Navigation />
       
-      {/* Header */}
-      <section className="bg-blue-600 text-white py-16">
-        <div className="container mx-auto px-6">
-          <h1 className="text-4xl font-bold mb-4">Learning Tracks</h1>
-          <p className="text-xl">Discover structured learning paths in STEM fields</p>
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-cyan-800 text-white py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="container mx-auto px-6 text-center relative z-10">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            Learning <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Tracks</span>
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed text-blue-100">
+            Discover structured learning paths in STEM fields. Master skills through hands-on projects and real-world applications.
+          </p>
         </div>
+        {/* Decorative elements */}
+        <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl"></div>
+        <div className="absolute bottom-10 right-10 w-32 h-32 bg-cyan-400/20 rounded-full blur-xl"></div>
       </section>
 
       <div className="container mx-auto px-6 py-8">
@@ -216,10 +224,6 @@ export default function TracksPage() {
                     }`}>
                       {track.difficulty}
                     </span>
-                    <div className="text-right text-sm text-gray-500">
-                      <div>⭐ {track.rating}</div>
-                      <div>{track.enrollments} enrolled</div>
-                    </div>
                   </div>
                   
                   <h3 className="text-xl font-semibold mb-2">{track.title}</h3>

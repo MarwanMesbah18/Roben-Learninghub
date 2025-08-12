@@ -12,23 +12,23 @@ export default function Navigation() {
       <div className="container mx-auto px-6">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-4">
+          <Link href="/" className="flex items-end space-x-1">
             {/* Logo Image */}
-            <div className="w-12 h-12">
+            <div className="w-14 h-14 flex items-center justify-center">
               <Image 
                 src="/logo.png" 
                 alt="RobEn Logo" 
-                width={48} 
-                height={48} 
+                width={56} 
+                height={56} 
                 className="w-full h-full object-contain"
               />
             </div>
             {/* Brand Text */}
-            <div className="flex flex-col">
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent leading-tight">
+            <div className="flex flex-col justify-end pb-0.5">
+              <span className="text-base font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent leading-tight">
                 RobEn
               </span>
-              <span className="text-sm font-semibold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent tracking-wide leading-tight">
+              <span className="text-xs font-semibold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent tracking-wide leading-tight">
                 Learning Hub
               </span>
             </div>
@@ -56,7 +56,7 @@ export default function Navigation() {
           {/* Auth Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <Link 
-              href="/login" 
+              href="/signin" 
               className="text-gray-700 hover:text-blue-600 transition-colors font-medium px-4 py-2"
             >
               Sign In
@@ -100,7 +100,7 @@ export default function Navigation() {
                 Contact
               </Link>
               <div className="flex flex-col space-y-3 pt-4 border-t border-gray-100">
-                <Link href="/login" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                <Link href="/signin" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                   Sign In
                 </Link>
                 <Link href="/signup" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-200 font-medium text-center shadow-lg">

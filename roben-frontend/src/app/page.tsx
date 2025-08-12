@@ -92,10 +92,6 @@ export default function Home() {
                   }`}>
                     {track.difficulty}
                   </span>
-                  <div className="text-right text-sm text-gray-500">
-                    <div className="flex items-center">⭐ <span className="ml-1 font-semibold">{track.rating}</span></div>
-                    <div className="text-xs">{track.enrollments} enrolled</div>
-                  </div>
                 </div>
                 <h3 className="text-2xl font-bold mb-3 text-gray-900 group-hover:text-blue-600 transition-colors">{track.title}</h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">{track.description}</p>

@@ -54,15 +54,23 @@ export default function DashboardPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
       <Navigation />
       
-      {/* Header */}
-      <section className="bg-blue-600 text-white py-12">
-        <div className="container mx-auto px-6">
-          <h1 className="text-3xl font-bold mb-2">Welcome back, {userProgress.name}!</h1>
-          <p className="text-blue-200">Continue your learning journey</p>
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-cyan-800 text-white py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="container mx-auto px-6 text-center relative z-10">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            My <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Learning</span>
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed text-blue-100">
+            Welcome back, {userProgress.name}! Continue your learning journey and track your progress.
+          </p>
         </div>
+        {/* Decorative elements */}
+        <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl"></div>
+        <div className="absolute bottom-10 right-10 w-32 h-32 bg-cyan-400/20 rounded-full blur-xl"></div>
       </section>
 
       <div className="container mx-auto px-6 py-8">

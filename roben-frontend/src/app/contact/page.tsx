@@ -2,15 +2,23 @@ import Navigation from "@/components/Navigation";
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-blue-600 text-white py-16">
-        <div className="container mx-auto px-6 text-center">
-          <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
-          <p className="text-xl">We'd love to hear from you</p>
+      <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-cyan-800 text-white py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="container mx-auto px-6 text-center relative z-10">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            Contact <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Us</span>
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed text-blue-100">
+            We'd love to hear from you. Get in touch and let's build something amazing together.
+          </p>
         </div>
+        {/* Decorative elements */}
+        <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl"></div>
+        <div className="absolute bottom-10 right-10 w-32 h-32 bg-cyan-400/20 rounded-full blur-xl"></div>
       </section>
 
       {/* Contact Content */}
